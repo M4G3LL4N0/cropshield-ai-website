@@ -1,0 +1,9 @@
+{
+  "name": "cropshield-ai-website",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Public website for CropShield AI. High-level field briefs only.",
+  "scripts": {
+    "build": "node -e \"console.log('static site')\""
+  }
+}

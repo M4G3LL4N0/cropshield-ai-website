@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CropShield AI — see which acres need attention</title>
+    <meta
+      name="description"
+      content="CropShield AI is a field-attention product for growers and agronomists. It turns scouting and weather signals into a high-level brief about where a field needs a closer look. Demo outputs are simulated and are not licensed agronomic advice."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="mast">
+      <a class="brand" href="/">CropShield AI</a>
+      <nav>
+        <a href="#brief">Field brief</a>
+        <a href="#who">Who it is for</a>
+        <a href="#request">Request</a>
+      </nav>
+      <p class="maturity">Simulated demo · not licensed advice</p>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Field attention · high-level briefs</p>
+          <h1>See which acres need a closer look before you treat the whole field.</h1>
+          <p class="lede">
+            CropShield AI helps growers and agronomists turn scattered field
+            signals into a readable brief: where pressure looks higher, where
+            the crop looks quieter, and what to review with a licensed advisor.
+            This public site stays at that level. It does not publish treatment
+            recipes, application methods, or biological production steps.
+          </p>
+          <div class="actions">
+            <a class="btn primary" id="primary-cta" href="#brief">Open a field brief</a>
+            <a class="btn" href="#request">Request a walkthrough</a>
+          </div>
+        </div>
+        <aside class="field" aria-label="High-level field attention map">
+          <div class="field-top">
+            <span>DEMO FIELD</span>
+            <span>ATTENTION ONLY</span>
+          </div>
+          <div class="rows" aria-hidden="true">
+            <span class="quiet"></span><span class="watch"></span><span class="quiet"></span>
+            <span class="watch"></span><span class="focus"></span><span class="watch"></span>
+            <span class="quiet"></span><span class="watch"></span><span class="quiet"></span>
+          </div>
+          <p>Quiet · Watch · Focus. Colors mark attention, not a treatment plan.</p>
+        </aside>
+      </section>
+
+      <section id="brief">
+        <h2>A brief, not a protocol</h2>
+        <p>
+          Choose a sample field situation. The output is a high-level attention
+          note generated on this page. It is not a spray plan, not a diagnosis,
+          and not a license to act.
+        </p>
+        <form id="brief-form" class="brief">
+          <label>
+            Situation
+            <select name="sit">
+              <option value="canopy">Canopy looks uneven after a wet week</option>
+              <option value="edge">Field edges look more stressed than the center</option>
+              <option value="quiet">Most of the field looks quiet</option>
+            </select>
+          </label>
+          <button type="submit">Show the brief</button>
+        </form>
+        <article id="brief-out" class="out" hidden></article>
+        <p class="fine">
+          Always validate with a PCA, CCA, or other licensed advisor and with
+          local rules. Demo intelligence is for product understanding only.
+        </p>
+      </section>
+
+      <section id="who">
+        <h2>Who this is for</h2>
+        <ul class="facts">
+          <li>Growers who want a calmer picture of where to walk first.</li>
+          <li>Agronomists who need a shared field brief before a visit.</li>
+          <li>Equipment partners exploring a command-center view — later, not claimed here.</li>
+        </ul>
+      </section>
+
+      <section id="request">
+        <h2>Request a walkthrough</h2>
+        <p>This page does not send email. Submit to open a mail draft on your machine.</p>
+        <form id="request-form" class="request">
+          <label>Name <input name="name" required autocomplete="name" /></label>
+          <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+          <label>What field problem you want a brief for <textarea name="note" required rows="4"></textarea></label>
+          <button type="submit">Open a request draft</button>
+          <p class="status" id="request-status" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>CropShield AI · high-level field briefs · no treatment protocols on this site</footer>
+    <script src="/app.js"></script>
+  </body>
+</html>
